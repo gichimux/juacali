@@ -9,6 +9,6 @@ urlpatterns = [
     path('become-vendor/', views.become_vendor, name='become_vendor'),
     path('vendor-admin/', views.vendor_admin, name='vendor_admin'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('login/', auth_views.LoginView.as_view(template='vendors/login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='vendors/login.html'), name='login'),
 
 ]

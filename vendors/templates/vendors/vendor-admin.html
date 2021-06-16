@@ -1,7 +1,8 @@
 {% extends 'core/base.html' %}
 {%block title %} Vendor Admin | {%endblock%}
 {% block content %}
-
+<div>
 <h1> Vendor admin - {{vendor.name}}</h1>
 <a href="{% url 'logout'%}" class="button is-danger">logout</a>
+</div>
 {%endblock%}
