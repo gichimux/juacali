@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block content %}
+        <p>Become Vendor Works! </p>
+        <form method="POST" action=".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="field">
+               <div class="control">
+                   <button class="button is_dark ">Sign Up</button>
+               </div> 
+            </div>
+        </form>
+{% endblock %}

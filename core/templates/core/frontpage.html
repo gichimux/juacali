@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% block content %}
+        <p>Frontpage works!</p>
+        <a href="{% url 'login' %} ">login</a><br>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'vendor_admin' %}">vendor admin</a>
+        {% else %}
+        <a href="{% url 'become_vendor'%}">Become vendor</a>
+        {% endif %}
+{% endblock %}
