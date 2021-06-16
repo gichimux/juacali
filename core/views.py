@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
-# Create your views here.
-
+from products.models import Product
 def index(request):
-    
-    context ={
+    latest_products = Product.objects.all() [0:8]
+    product = Product.objects.all()
 
+    context ={
+        "latest_products": latest_products,
     }
     return render (request, 'core/frontpage.html', context )

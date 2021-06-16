@@ -1,14 +1,14 @@
 {% extends 'core/base.html' %}
-{% block title %} vendor admin | {%endblock%}
+{% block title %} add product | {%endblock%}
 
 {% block content %}
         <p>Become Vendor Works! </p>
-        <form method="POST" >
+        <form method="POST" action="." enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <div class="field">
                <div class="control">
-                   <button class="button is_dark ">Sign Up</button>
+                   <button class="button is_dark ">Add</button>
                </div> 
             </div>
         </form>

@@ -1,17 +1,11 @@
 {% extends 'core/base.html' %}
 {% block content %}
-        <p>Frontpage works!</p>
-        <a href="{% url 'login' %} " class="btn btn-success">login</a>
-        {% if request.user.is_authenticated %}
-        <a href="{% url 'vendor_admin' %}" class="btn btn-primary">vendor admin</a>
-        {% else %}
-        <a href="{% url 'become_vendor'%}" class="btn btn-success">Become vendor</a>
-        {% endif %}
+
 
         <div class="container">
-                <h2>Latest Products</h2>
+                <h2>{{category.title }}</h2>
                 <div class="row">
-                {% for product in latest_products %}
+                {% for product in category.products.all %}
                 <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
                                 <img src="{{product.get_thumbnail }}" class="card-img-top" alt="...">
